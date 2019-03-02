@@ -1,0 +1,125 @@
+<!DOCTYPE html> 
+<html lang = "en"> 
+<head>
+	<title>Taj Mahal Wiki</title>
+	<meta charset = "utf-8" /> 	
+	<!-- This code to like css file to style my site -->
+	<link rel="stylesheet" href = "style.css" type = "text/css"/>
+	<!-- This code makes the web resposive-->
+	<meta name = "viewport" content = "widht=device-width, initial-scal = 1.0"/>    
+</head>
+
+<body class = "body">
+	<!-- This the header of the page contains logo and Main navigation bar --> 
+	<header class="main-header">
+		<div class="logo"><img src="images/bg.jpg"/><p>Taj Mahal Wiki</p></div>    
+		<nav>
+			<ul>
+				<li><a href = "index.html">Home</a></li>
+				<li class="active"><a href = "#">Photo Galary</a></li>
+				<li><a href = "about_us.html">About Us</a></li>
+				<li><a href = "contact_us.html">Contact Us</a></li>
+			</ul>
+		</nav>  
+	</header>
+	<dev class="main-content"> 
+			<script src="javascript.js"></script>
+			<style>
+				#container{
+				width:70%;
+				height: 500px;
+				border:1px solid black;
+				float: left; 
+				position: relative;
+				margin: 2% 0; 
+				}
+				#container>img{
+				width:100%;
+				height: 100%;
+				position: absolute;
+				}
+				#container>.btn{
+				position: absolute;
+				width:50px;
+				height: 50px;
+				border: none;
+				border-radius: 25px;
+				top:200px;
+				background: black;
+				color: white;
+				font-size: 20px;
+				}
+				#container>#btn1:hover{
+				box-shadow: 10px 0px 20px 0px black;
+				}
+				#container>#btn2:hover{
+				box-shadow: -10px 0px 20px 0px black;
+				}
+				#container>#btn2{
+				position: relative;
+				float: right;
+				}
+			</style>
+			</head>
+				<body>
+				<div id="container">
+				<img class="slides" src="images/1.png"/>
+				<img class="slides" src="images/2.JPG"/>
+				<img class="slides" src="images/3.jpg"/>
+				<img class="slides" src="images/4.jpg"/>
+				<img class="slides" src="images/5.JPG"/>
+				<img class="slides" src="images/6.jpg"/>
+				<img class="slides" src="images/7.jpg"/>
+				<img class="slides" src="images/8.jpg"/>
+				<img class="slides" src="images/9.jpg"/>
+				<img class="slides" src="images/10.jpg"/>
+				<img class="slides" src="images/11.jpg"/>
+
+				<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+				<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+				</div>
+			<script>
+			var index = 8;
+			showImage(index); 
+			function plusIndex(n){
+			index = index + n;
+			showImage(index);
+			}
+
+			function showImage(n){
+			var i;
+			var x = document.getElementsByClassName("slides");
+			if(n > x.length){ index = 1};
+			if(n < 1){ index = x.length};
+			for(i=0;i<x.length;i++)
+			{
+			x[i].style.display = "none";
+			}
+			x[index-1].style.display = "block";
+			}
+			</script>
+		</dev> 
+	<aside class="map-sidebar">
+		<articl>
+		<a href="https://www.google.com/maps/place/Taj+Mahal/@27.1750151,78.0399665,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xdd2ae4803f767dde!8m2!3d27.1750151!4d78.0421552" title="GoogleMaps"><h2>Google Maps</h2></a>   
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.4046787364236!2d78.03996651505055!3d27.17501508301541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdd2ae4803f767dde!2sTaj+Mahal!5e0!3m2!1sen!2s!4v1507354936547" width="250" height="200" frameborder="0" style="border:0" allowfullscreen></iframe> 
+		</article>  
+	</aside>
+	<aside class="site-sidebar">
+		<article> 
+			<a href="https://www.tajmahal.gov.in/"><h2>Click Here To Go  To<br>The Official Website</h2></a>
+		</article>
+	</aside>
+	<aside class="wiki-sidebar">
+		<article> 
+			<a href="https://www.tajmahal.gov.in/"><h2>Click Here To Go  To<br>T.M. Wikipedia Page</h2></a>
+		</article>
+	</aside>
+
+	<!--main footer --> 
+	<footer class="main-footer"> 
+		<p> Coprights &copy 2017 Mabulmagd55@gmail.com </p> 
+</body> 
+ 
+</html> 
+
